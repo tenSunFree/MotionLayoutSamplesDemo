@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="false">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp">
+
+        <com.home.motionlayoutsamplesdemo.common.MotionToolBar
+            android:id="@+id/motion_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/activity_main_tool_bar_background"
+            android:minHeight="85dp"
+            app:layoutDescription="@xml/activity_main_scene"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            app:motionDebug="NO_DEBUG">
+
+            <ImageView
+                android:id="@+id/image_view_date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_date_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_volume"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_volume_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_date"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_wifi"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_wifi"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_bluetooth"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_bluetooth"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_4g"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_4g"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_electricity"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_electricity"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_direction"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_direction"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/image_view_flying"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_flying"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/text_view_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHT007_5G"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/text_view_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="藍牙"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/text_view_4g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="行動數據"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/text_view_electricity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="省電功能"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/text_view_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直向"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/text_view_flying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="飛航模式"
+                android:textColor="#FFFFFF"
+                tools:ignore="HardcodedText" />
+        </com.home.motionlayoutsamplesdemo.common.MotionToolBar>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?><!--describe the animation for activity_motion_with_app_bar.xml-->
+<!--animate in the path way on a view-->
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/tools">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="3000">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0.2"
+                app:framePosition="30"
+                app:motionTarget="@id/image_view_date" />
+            <KeyAttribute
+                android:alpha="0.4"
+                app:framePosition="60"
+                app:motionTarget="@id/image_view_date" />
+            <KeyAttribute
+                android:alpha="0.5"
+                app:framePosition="90"
+                app:motionTarget="@id/image_view_date" />
+            <KeyAttribute
+                android:alpha="0.5"
+                app:motionProgress="30"
+                app:motionTarget="@+id/image_view_volume" />
+            <KeyAttribute
+                android:alpha="0"
+                app:motionProgress="70"
+                app:motionTarget="@+id/image_view_volume" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_wifi" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_wifi" />
+            <KeyPosition
+                app:framePosition="1"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@+id/text_view_wifi"
+                app:percentX="0.1" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_bluetooth" />
+            <KeyPosition
+                app:framePosition="1"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@+id/text_view_bluetooth"
+                app:percentX="0.1" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_4g" />
+            <KeyPosition
+                app:framePosition="1"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@+id/text_view_4g"
+                app:percentX="0.1" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_electricity" />
+            <KeyPosition
+                app:framePosition="1"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@+id/text_view_electricity"
+                app:percentY="0.7" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_direction" />
+            <KeyPosition
+                app:framePosition="1"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@+id/text_view_direction"
+                app:percentY="0.7" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="1"
+                app:motionTarget="@+id/text_view_flying" />
+            <KeyPosition
+                app:framePosition="1"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@+id/text_view_flying"
+                app:percentY="0.7" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/image_view_date"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/icon_date_bar"
+            app:layout_constraintBottom_toTopOf="@+id/image_view_volume"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/image_view_volume"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/icon_volume_bar"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/image_view_wifi"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_bluetooth"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/image_view_bluetooth"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_4g"
+            app:layout_constraintStart_toEndOf="@+id/image_view_wifi" />
+
+        <Constraint
+            android:id="@+id/image_view_4g"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_electricity"
+            app:layout_constraintStart_toEndOf="@+id/image_view_bluetooth" />
+
+        <Constraint
+            android:id="@+id/image_view_electricity"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_direction"
+            app:layout_constraintStart_toEndOf="@+id/image_view_4g" />
+
+        <Constraint
+            android:id="@+id/image_view_direction"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_flying"
+            app:layout_constraintStart_toEndOf="@+id/image_view_electricity" />
+
+        <Constraint
+            android:id="@+id/image_view_flying"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_view_direction" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/image_view_date"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/icon_date_bar"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/image_view_volume"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/icon_volume_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_date" />
+
+        <Constraint
+            android:id="@+id/image_view_wifi"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_view_electricity"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_bluetooth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_volume" />
+
+        <Constraint
+            android:id="@+id/text_view_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_wifi"
+            app:layout_constraintStart_toStartOf="@+id/image_view_wifi"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_wifi" />
+
+        <Constraint
+            android:id="@+id/image_view_bluetooth"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_view_electricity"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_4g"
+            app:layout_constraintStart_toEndOf="@+id/image_view_wifi"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_volume" />
+
+        <Constraint
+            android:id="@+id/text_view_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_bluetooth"
+            app:layout_constraintStart_toStartOf="@+id/image_view_bluetooth"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_bluetooth" />
+
+        <Constraint
+            android:id="@+id/image_view_4g"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_view_electricity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_view_bluetooth"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_volume" />
+
+        <Constraint
+            android:id="@+id/text_view_4g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_4g"
+            app:layout_constraintStart_toStartOf="@+id/image_view_4g"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_4g" />
+
+        <Constraint
+            android:id="@+id/image_view_electricity"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_direction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_wifi" />
+
+        <Constraint
+            android:id="@+id/text_view_electricity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_electricity"
+            app:layout_constraintStart_toStartOf="@+id/image_view_electricity"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_electricity" />
+
+        <Constraint
+            android:id="@+id/image_view_direction"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_flying"
+            app:layout_constraintStart_toEndOf="@+id/image_view_electricity"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_wifi" />
+
+        <Constraint
+            android:id="@+id/text_view_direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_direction"
+            app:layout_constraintStart_toStartOf="@+id/image_view_direction"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_direction" />
+
+        <Constraint
+            android:id="@+id/image_view_flying"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_view_direction"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_wifi" />
+
+        <Constraint
+            android:id="@+id/text_view_flying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_flying"
+            app:layout_constraintStart_toStartOf="@+id/image_view_flying"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_flying" />
+    </ConstraintSet>
+</MotionScene>
